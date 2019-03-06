@@ -1,6 +1,7 @@
 export class Picture {
   id: number;
-  caption: string;
+  albumId: number;
   date: string;
-  imgSrc: string;
+  smallImgSrc: string;
+  fullImgSrc: string;
 }

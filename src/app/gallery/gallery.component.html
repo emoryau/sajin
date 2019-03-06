@@ -1,7 +1,8 @@
 <div class="container-fluid">
-  <div class="row">
-      <div *ngFor="let picture of pictures" class="gallery col">
-        <a routerLink="/viewer/{{picture.imgSrc}}"><img src="http://goo.gl/vyAs27"/></a>
+  <div  class="row">
+      <div *ngFor="let tile of tiles" class="gallery col-sm-12 col-md-6 col-lg-4 col-xl-3">
+        <a routerLink="/viewer/{{tile.name}}">
+          <img class="img-fluid" src="{{tile.imgSrcSmall}}"/></a>
       </div>
   </div>
 </div>

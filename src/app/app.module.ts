@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { HttpClientModule } from '@angular/common/http';
 
 import { TooltipModule } from 'ngx-bootstrap/tooltip';
 
@@ -17,6 +18,7 @@ import { ViewerComponent } from './viewer/viewer.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    HttpClientModule,
     TooltipModule.forRoot()
   ],
   providers: [],

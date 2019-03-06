@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Picture } from '../picture';
-import { PictureService } from '../picture.service';
+import { TileService } from '../tile.service';
+import { Tile } from '../tile';
 
 @Component({
   selector: 'app-gallery',
@@ -8,16 +8,16 @@ import { PictureService } from '../picture.service';
   styleUrls: ['./gallery.component.scss']
 })
 export class GalleryComponent implements OnInit {
-  pictures: Picture[];
+  tiles: Tile[];
 
-  constructor(private pictureService: PictureService) { }
+  constructor(private tileService: TileService) { }
 
   ngOnInit() {
-    this.getPictures();
+    this.getTiles();
   }
 
-  getPictures(): void {
-    this.pictureService.getPictures()
-      .subscribe(pictures => this.pictures = pictures);
+  getTiles(): void {
+    this.tileService.getTiles()
+      .subscribe(tiles => this.tiles = tiles);
   }
 }
