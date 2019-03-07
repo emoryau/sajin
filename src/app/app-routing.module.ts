@@ -5,8 +5,13 @@ import { ViewerComponent } from './viewer/viewer.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/gallery', pathMatch: 'full' },
-  { path: 'gallery', component: GalleryComponent},
-  { path: 'viewer/:id', component: ViewerComponent}
+  { path: 'gallery', component: GalleryComponent, children: [
+      {
+        path: '**',
+        component: GalleryComponent
+      }
+    ]},
+  { path: 'viewer/:id', component: ViewerComponent }
 ];
 
 @NgModule({

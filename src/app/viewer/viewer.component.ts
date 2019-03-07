@@ -13,7 +13,9 @@ export class ViewerComponent implements OnInit, OnDestroy {
   private sub: any;
   picture: Picture;
 
-  constructor(private route: ActivatedRoute, private pictureService: TileService) { }
+  constructor(private route: ActivatedRoute, private pictureService: TileService) {
+    console.log(route);
+  }
 
   ngOnInit() {
     this.sub = this.route.params.subscribe(params => {
