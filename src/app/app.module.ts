@@ -10,12 +10,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { GalleryComponent } from './gallery/gallery.component';
 import { ViewerComponent } from './viewer/viewer.component';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     GalleryComponent,
-    ViewerComponent
+    ViewerComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
